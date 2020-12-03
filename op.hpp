@@ -15,9 +15,13 @@ class Op : public Base {
 	}
         virtual double evaluate() { return opVal; }
         virtual std::string stringify() { return number.str(); }
+
+	virtual Base* get_right() { return nullptr; }
+	virtual Base* get_left() { return nullptr; }	
    private:
 	double opVal;
 	std::stringstream number;
+
 };
 
 #endif //__OP_HPP__

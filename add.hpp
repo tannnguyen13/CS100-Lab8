@@ -8,13 +8,20 @@ class Add : public Base {
 	private:
 		double value;
 		std::string expression = "";
+
+		Base* right;
+		Base* left;
 	public:
-		Add(Base* base1, Base* base2) : Base() { 
+		Add(Base* base1, Base* base2) : Base() {
+			right = base2;
+			left = base1;	 
 			value = base1->evaluate() + base2->evaluate();
 			expression = base1->stringify() + " + " + base2->stringify();
 		}
 		virtual double evaluate() { return value;}
 		virtual std::string stringify() { return expression;}
+		virtual Base* get_right() { return right;}
+		virtual Base* get_left() { return left;}
 };
 
 #endif //__ADD_HPP__

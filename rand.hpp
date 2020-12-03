@@ -11,7 +11,10 @@ class Rand : public Base {
 	public:
 		Rand(): Base() {randVal = rand() % 100;}
 		virtual double evaluate() {return randVal;}
-		virtual std::string stringify() {return std::to_string(randVal);}	
+		virtual std::string stringify() {return std::to_string(randVal);}
+		
+		virtual Base* get_right() { return nullptr;}
+		virtual Base* get_left() {return nullptr;}	
 };
 
 #endif //__RAND_HPP__
