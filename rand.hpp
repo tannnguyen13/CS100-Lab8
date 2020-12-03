@@ -14,7 +14,10 @@ class Rand : public Base {
 		virtual std::string stringify() {return std::to_string(randVal);}
 		
 		virtual Base* get_right() { return nullptr;}
-		virtual Base* get_left() {return nullptr;}	
+		virtual Base* get_left() {return nullptr;}
+
+		virtual void accept(CountVisitor cv) {return cv->visit_rand();}
+                virtual Iterator* create_iterator() {return new NullIterator(this);}	
 };
 
 #endif //__RAND_HPP__
