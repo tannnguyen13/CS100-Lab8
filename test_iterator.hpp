@@ -8,6 +8,8 @@
 #include "sub.hpp"
 #include "op.hpp"
 #include <vector>
+
+using namespace std;
 TEST(PreOrderTest, Regular) {
 	vector<Base*> vec;
 	Op* three = new Op(3);
@@ -22,3 +24,5 @@ TEST(PreOrderTest, Regular) {
 	EXPECT_EQ(vec.at(0)->evaluate() == 3);
 	EXPECT_EQ(vec.at(1)->evaluate() == 2);	
 }
+
+#endif
