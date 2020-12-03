@@ -2,6 +2,11 @@
 #include "equation.cpp"
 #include "add.hpp"
 #include "visitor.hpp"
+#include "mult.hpp"
+#include "div.hpp"
+#include "pow.hpp"
+#include "rand.hpp"
+#include "binary_iterator.cpp"
 #include "preorder_iterator.cpp"
 #include <iostream>
 using namespace std;

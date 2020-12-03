@@ -2,9 +2,12 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
 ADD_SUBDIRECTORY(googletest)
 
+ADD_EXECUTABLE(main
+	main.cpp
+)
+
 ADD_EXECUTABLE(test
 	unit_test.cpp
-	binary_iterator.cpp
 )
 
 

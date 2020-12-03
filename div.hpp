@@ -14,7 +14,7 @@ class Div : public Base {
 	public:
 		Div(Base* base1, Base* base2) : Base() {
 			right = base2;
-			right = base1;
+			left = base1;
 			value = base1->evaluate() / base2->evaluate();
 			expression = base1->stringify() + " / " + base2->stringify();
 		}
