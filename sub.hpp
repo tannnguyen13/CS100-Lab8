@@ -2,6 +2,7 @@
 #define __SUB_HPP__
 
 #include "base.hpp"
+#include "iterator.hpp"
 #include <string>
 
 class Sub : public Base {
@@ -24,7 +25,7 @@ class Sub : public Base {
 		virtual Base* get_right() { return right;}
 		virtual Base* get_left() { return left;}
 
-		virtual void accept(CountVisitor cv) {return cv->visit_sub();}
+		virtual void accept(CountVisitor* cv) {return cv->visit_sub();}
                 virtual Iterator* create_iterator() {return new BinaryIterator(this);}
 };
 

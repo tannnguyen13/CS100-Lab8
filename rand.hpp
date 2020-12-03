@@ -2,6 +2,7 @@
 #define __RAND_HPP__
 
 #include "base.hpp"
+#include "iterator.hpp"
 #include <cstdlib>
 #include <string>
 
@@ -16,7 +17,7 @@ class Rand : public Base {
 		virtual Base* get_right() { return nullptr;}
 		virtual Base* get_left() {return nullptr;}
 
-		virtual void accept(CountVisitor cv) {return cv->visit_rand();}
+		virtual void accept(CountVisitor* cv) {return cv->visit_rand();}
                 virtual Iterator* create_iterator() {return new NullIterator(this);}	
 };
 
